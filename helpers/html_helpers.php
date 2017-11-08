@@ -13,6 +13,12 @@ class html_helpers
         return '
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+            <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+            <!-- WARNING: Respond.js doesn\'t work if you view the page via file:// -->
+            <!--[if lt IE 9]>
+                <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+                <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
         ';
     }
 
@@ -46,5 +52,32 @@ class html_helpers
   </div>
 </nav>
         ';
+    }
+
+    public static function get_footer() :string
+    {
+        $copyright = html_helpers::get_copyright_notice();
+        return "
+        <footer>
+            <div class=\"container-fluid justify-content-center\">
+                <div class=\"row justify-content-center\">
+                    <div class=\"col-xs-12\">
+                        $copyright
+                    </div>
+                </div>
+            </div>
+        </footer>
+        ";
+    }
+
+    public static function get_copyright_notice() : string
+    {
+        $year = date("Y");
+
+        if ($year != 2017){
+            return "<p>Copyright © <a href=\"https://github.com/Civ-Dev\">Civ-Dev</a>. All rights reserved 2017 - $year .</p>";
+        }else{
+            return '<p>Copyright © <a href="https://github.com/Civ-Dev">Civ-Dev</a>. All rights reserved 2017. </p>';
+        }
     }
 }
