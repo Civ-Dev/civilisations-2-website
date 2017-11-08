@@ -8,7 +8,7 @@
 
 class html_helpers
 {
-    public static function get_styles() : string
+    public static function get_styles()
     {
         return '
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -16,7 +16,7 @@ class html_helpers
         ';
     }
 
-    public static function get_scripts() : string
+    public static function get_scripts()
     {
         return '
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -25,7 +25,7 @@ class html_helpers
         ';
     }
 
-    public static function get_navbar() : string
+    public static function get_navbar()
     {
         return '
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
