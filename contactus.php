@@ -13,4 +13,3 @@ include_once 'helpers/html_helpers.php';
 <?php echo html_helpers::get_scripts() ?>
 </body>
 </html>
-
