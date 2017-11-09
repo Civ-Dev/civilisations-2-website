@@ -48,6 +48,11 @@ class html_helpers
       <li class="nav-item">
         <a class="nav-link" href="/contactus.php">Contact us</a>
       </li>
+      <!--
+      <li class="nav-item">
+        <a class="nav-link" href="/serverstatus.php">Server status</a>
+      </li>
+      -->
     </ul>
   </div>
 </nav>
@@ -59,6 +64,7 @@ class html_helpers
         $copyright = html_helpers::get_copyright_notice();
         return "
         <footer>
+            <hr>
             <div class=\"container-fluid justify-content-center\">
                 <div class=\"row justify-content-center\">
                     <div class=\"col-xs-12\">
